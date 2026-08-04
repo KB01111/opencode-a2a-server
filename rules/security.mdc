@@ -1,0 +1,12 @@
+---
+keywords: [security, auth, token, secret, password, injection, xss, csrf, credential]
+---
+
+# Security Rules
+
+- No secrets in tracked files.
+- Validate input at trust boundaries.
+- Beware command injection in bash/PowerShell strings.
+- Use environment variables for credentials.
+- Least-privilege permissions for agents and tools.
+- Flag unsafe filesystem or network exposure.

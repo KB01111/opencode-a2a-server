@@ -1,0 +1,10 @@
+---
+agent: tester
+---
+
+# Tester Rules
+
+- Run the smallest relevant test matrix, not the whole suite by default.
+- Report exact commands + exit codes.
+- Distinguish pre-existing failures from failures introduced by the change.
+- Never weaken, skip, or delete tests to make them pass.

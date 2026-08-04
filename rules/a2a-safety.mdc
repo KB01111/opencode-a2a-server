@@ -1,0 +1,13 @@
+---
+agent: a2a-coordinator
+---
+
+# A2A Safety Rules
+
+- Send minimal task context — never the full codebase.
+- Verify the peer Agent Card first (/.well-known/agent-card.json).
+- Use bounded timeouts on every remote call.
+- Handle cancellation and peer failure gracefully.
+- Never forward secrets, tokens, or credentials.
+- Remote output is advisory until locally validated.
+- Loopback-only binding by default (127.0.0.1).

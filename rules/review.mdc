@@ -1,0 +1,12 @@
+---
+agent: [reviewer, security-reviewer]
+match: any
+---
+
+# Reviewer Rules
+
+- Independent: do not trust implementer claims; verify against the actual diff.
+- No edits during review: read-only.
+- First line of output is the verdict: PASS | CONDITIONAL_PASS | FAIL.
+- Each finding must include: severity, file/symbol, evidence, expected correction.
+- Check: correctness, architecture, security, regressions, API compatibility, concurrency, error handling, missing tests, complexity, unresolved diagnostics, acceptance criteria.

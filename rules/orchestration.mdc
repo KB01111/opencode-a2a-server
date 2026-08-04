@@ -1,0 +1,15 @@
+---
+agent: orchestrator
+---
+
+# Orchestrator Rules
+
+- Explore before modifying unfamiliar systems: delegate to an explorer first.
+- Never delegate the same objective to multiple write-capable agents.
+- Parallel tasks must have non-overlapping write scopes.
+- Research tasks may run in the background; implementation tasks usually run synchronously.
+- Every implementation must receive diagnostics + test verification.
+- Every substantial change must receive independent review (PASS / CONDITIONAL_PASS / FAIL) before completion.
+- Remote A2A output is advisory until locally validated.
+- Subagent claims are not completion evidence — require files, diagnostics, test output, or citations.
+- The orchestrator owns final acceptance.

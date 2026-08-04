@@ -1,0 +1,69 @@
+{
+  // Dynamic Context Pruning config for the multi-agent setup.
+  // Protects subagent/test/review/A2A evidence from pruning.
+  "enabled": true,
+  "debug": false,
+  "pruneNotification": "minimal",
+  "pruneNotificationType": "chat",
+  "turnProtection": {
+    "enabled": true,
+    "turns": 4
+  },
+  "experimental": {
+    // Allow pruning inside subagent sessions too (they produce large tool outputs),
+    // but protectedTools below keep the important evidence.
+    "allowSubAgents": true
+  },
+  "compress": {
+    "mode": "range",
+    "permission": "ask",
+    "showCompression": true,
+    "protectedTools": [
+      "task",
+      "skill",
+      "todowrite",
+      "todoread",
+      "write",
+      "edit",
+      "subagents_run",
+      "subagents_delegate",
+      "subagents_read",
+      "subagents_list",
+      "a2a_call",
+      "lsp_diagnostics",
+      "lsp_usages",
+      "lsp_inspect",
+      "lsp_rename",
+      "ast_grep_replace",
+      "web_search",
+      "clone_repo"
+    ],
+    "protectUserMessages": true
+  },
+  "strategies": {
+    "deduplication": {
+      "enabled": true,
+      "protectedTools": [
+        "task",
+        "write",
+        "edit",
+        "subagents_run",
+        "subagents_delegate",
+        "subagents_read",
+        "a2a_call",
+        "lsp_diagnostics"
+      ]
+    },
+    "purgeErrors": {
+      "enabled": true,
+      "turns": 6,
+      "protectedTools": [
+        "subagents_run",
+        "subagents_delegate",
+        "subagents_read",
+        "a2a_call",
+        "lsp_diagnostics"
+      ]
+    }
+  }
+}

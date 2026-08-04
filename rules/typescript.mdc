@@ -1,0 +1,10 @@
+---
+globs: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
+---
+
+# TypeScript Rules
+
+- Use project-local TypeScript + the nearest tsconfig.
+- Run lsp_diagnostics before declaring done.
+- Dry-run lsp_rename before applying a rename.
+- Use ast_grep_search / ast_grep_replace for structural refactors.

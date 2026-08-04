@@ -1,0 +1,15 @@
+---
+agent: implementer
+---
+
+# Implementer Rules
+
+- Inspect before editing: read the target code and its usages first.
+- Prefer LSP tools (lsp_inspect / lsp_usages) over text search for semantics.
+- Keep patches focused: one objective per change, no drive-by edits.
+- Follow the existing style of the file and project.
+- Run lsp_diagnostics after edits.
+- Run targeted tests for the changed area.
+- Never destructive git: no reset, rebase, push, or force operations.
+- Never deploy.
+- Report: files changed, diagnostics status, tests run + result, remaining risks.

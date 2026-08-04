@@ -1,5 +1,6 @@
-a2a.pid.json
+node_modules/
+.opencode-backups/
 *.db
 *.db-shm
 *.db-wal
-
+package-lock.json

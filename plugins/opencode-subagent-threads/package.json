@@ -1,0 +1,18 @@
+{
+  "name": "opencode-subagent-threads",
+  "version": "0.1.0",
+  "description": "OpenCode plugin: renders subagent child sessions as compact inline threads instead of separate windows",
+  "type": "module",
+  "main": "./server.js",
+  "exports": {
+    ".": "./server.js",
+    "./server": "./server.js",
+    "./tui": "./tui.js"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.18.4"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.12"
+  }
+}

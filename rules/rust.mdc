@@ -1,0 +1,9 @@
+---
+globs: ["**/*.rs"]
+---
+
+# Rust Rules
+
+- Use cargo check / clippy / test via the tester agent.
+- rust-analyzer integration is optional/deferred — do not block on it.
+- Respect existing error-handling idioms (Result, thiserror/anyhow patterns in the repo).
